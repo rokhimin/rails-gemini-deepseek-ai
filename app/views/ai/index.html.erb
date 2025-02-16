@@ -16,8 +16,6 @@
                                     <div class="section">
                                         
                                     <h1 class="is-centered">Message with AI</h1>
-                                        
-                                        <%= @test1 %>
 
                                     <div class="card has-background-dark has-text-light">
                                         <div class="card-content"><div class="content">
@@ -25,126 +23,25 @@
                                         <%= form_tag("ai.rb") do %>
                                         
                                         <div class="field">
-                                        <label class="label has-text-light">API key<font color="red">*</font></label>
-                                        <%= text_field(:url, :field, :class => "input is-blue") %> 
+                                        <label class="label has-text-light">Model</label>
+                                        <div class="control">
+                                        <div class="select is-dark">
+                                        <%= select_tag(:model, options_for_select([["Gemini-1.5-Flash", "gemini"],["Deepseek-R1", "0xffffff"],["Llama", "0x1"],["Liquid", "0xd0021b"],["Blue", "0x22bd0"],["Green", "0x7ed321"],["Orange", "0xf5a623"],["Purple", "0x9013fe"]], params[:color] )) %>
+                                        </div>
+                                        </div>
                                         </div>
                                         
-                                        <div class="columns">
-                                        <div class="column">
                                         <div class="field">
-                                        <label class="label has-text-light">Username<font color="red">*</font></label>
-                                        <%= text_field(:username, :field, :class => "input is-blue") %> 
+                                        <label class="label has-text-light">API key<font color="red">*</font></label>
+                                        <%= text_field(:api_key, :field, :class => "input is-blue") %> 
                                         </div>
-                                        </div>
-
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Avatar url</label>
-                                        <%= text_field(:avatar_url, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-                                        </div>
-
+                                        
                                         <div class="field">
                                         <label class="label has-text-light">Message</label>
                                         <%= text_area(:message, :field, :class => "textarea") %> 
                                         </div>
                                         
-                                        <div class="field">
-                                        <label class="label has-text-light">Color</label>
-                                        <div class="control">
-                                        <div class="select is-dark">
-                                        <%= select_tag(:color, options_for_select([["Grey", "0x4a4a4a"],["White", "0xffffff"],["Black", "0x1"],["Red", "0xd0021b"],["Blue", "0x22bd0"],["Green", "0x7ed321"],["Orange", "0xf5a623"],["Purple", "0x9013fe"]], params[:color] )) %>
-                                        </div>
-                                        </div>
-                                        </div>
 
-                                        <div class="columns">
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Title<font color="red">*</font></label>
-                                        <%= text_field(:title, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Url Title</label>
-                                        <%= text_field(:url_title, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-                                        </div>
-
-                                        <div class="field">
-                                        <label class="label has-text-light">Desctiption</label>
-                                        <%= text_area(:desc, :field, :class => "textarea") %> 
-                                        </div>
-                                        
-                                        <div class="field">
-                                        <label class="label has-text-light">Image</label>
-                                        <%= text_field(:image, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        
-                                        <div class="field">
-                                        <label class="label has-text-light">Thumbnail</label>
-                                        <%= text_field(:thumbnail, :field, :class => "input is-blue") %> 
-                                            </div>
-                                        
-                                        <div class="columns">
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Author name</label>
-                                        <%= text_field(:author_name, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Author url</label>
-                                        <%= text_field(:author_url, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Author icon url</label>
-                                        <%= text_field(:author_icon_url, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-                                        </div>
-                                        
-                                        <div class="columns">
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Footer</label>
-                                        <%= text_field(:footer, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Icon footer</label>
-                                        <%= text_field(:icon_footer, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-                                        </div>
-                                        
-                                        <div class="columns">
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Field name</label>
-                                        <%= text_field(:field_name, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-
-                                        <div class="column">
-                                        <div class="field">
-                                        <label class="label has-text-light">Field value</label>
-                                        <%= text_field(:field_value, :field, :class => "input is-blue") %> 
-                                        </div>
-                                        </div>
-                                        </div>
-                                        
                                         <br/>
                                         
                                     <div class="field has-text-centered">
@@ -165,8 +62,8 @@
                                         <div class="content">
                                             <div class="control">
                                             <textarea class="textarea" placeholder="Disabled textarea" disabled >
-                                            <%= @discord_url_ %> 
-                                            <%= @discord_response %>
+                                            <%= @status %> 
+                                            <%= @answer %> 
                                             </textarea>
                                             </div>
                                         </div>
