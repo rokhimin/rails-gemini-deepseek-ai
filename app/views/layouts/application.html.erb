@@ -20,6 +20,19 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+     <style>
+        ::-webkit-scrollbar {
+        width: 15px;
+        height: 15px;
+        }
+        ::-webkit-scrollbar-track-piece  {
+        background-color: #222222;
+        }
+        ::-webkit-scrollbar-thumb:vertical {
+        height: 30px;
+        background-color: #000;
+        }
+  </style>
   </head>
 
   <body>

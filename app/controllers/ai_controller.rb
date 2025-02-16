@@ -51,12 +51,7 @@ class AiController < ApplicationController
     end
 
         @status = "Status : #{response.code}"
-
-    # Error Handling
-    rescue NoMethodError 
-      @answer = "fill out the form"
-    else
-      @answer = "#{load['candidates'][0]['content']['parts'][0]['text']}"
+        @answer = "#{load['candidates'][0]['content']['parts'][0]['text']}"
     
 
   
