@@ -49,7 +49,7 @@ class AiController < ApplicationController
         load = JSON.parse(response.body)
 
         
-      when ai_model == "deepseek" "llama", "liquid"
+      when ai_model == "deepseek", "llama", "liquid", "chatgpt"
         uri = URI.parse("https://openrouter.ai/api/v1/chat/completions")
         request = Net::HTTP::Post.new(uri)
         request.content_type = "application/json"
