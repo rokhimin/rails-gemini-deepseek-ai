@@ -8,5 +8,5 @@ vendor/* linguist-vendored
 config/credentials/*.yml.enc diff=rails_credentials
 config/credentials.yml.enc diff=rails_credentials
 
-linguist-vendored
-.html linguist-vendored=false
+*.erb linguist-language=Ruby
+*.html linguist-language=Ruby
